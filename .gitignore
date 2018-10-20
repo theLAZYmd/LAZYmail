@@ -1,0 +1,12 @@
+$ cat .gitignore
+src/util/config.json
+node_modules/
+
+src/.vscode/
+src/.history
+.history/
+.git/
+.idea/
+token.json
+package-lock.json
+requireForce: false

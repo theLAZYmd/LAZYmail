@@ -1,0 +1,292 @@
+[
+	{
+		"aliases": [
+			"setusername"
+		],
+		"description": "Sets bot client's username to a the single argument given.",
+		"usage": [
+			"setusername LAZYbot"
+		],
+		"module": "Administration",
+		"file": "set",
+		"method": "username",
+		"arguments": [
+			"args"
+		],
+		"prefix": "generic",
+		"requires": {
+			"user": "owner"
+		}
+	},
+	{
+		"aliases": [
+			"setprefix"
+		],
+		"description": "Sets the default prefix for commands for this server to the argument given. Prefixes are followed by spaces.",
+		"usage": [
+			"setprefix =="
+		],
+		"module": "Administration",
+		"file": "set",
+		"method": "genericprefix",
+		"arguments": [
+			"argument"
+		],
+		"prefix": "generic",
+		"requires": {
+			"user": "owner"
+		}
+	},
+	{
+		"aliases": [
+			"uptime",
+			"sincebleepbloop"
+		],
+		"description": "Returns the time elapsed since last bot restart. Note that host server glitch.com auto-restarts every 12 hours.",
+		"usage": [
+			"uptime"
+		],
+		"module": "Utility",
+		"file": "utility",
+		"method": "uptime",
+		"arguments": [],
+		"prefix": "generic",
+		"requires": {
+			"args": {
+				"length": 0
+			}
+		}
+	},
+	{
+		"aliases": [
+			"eval"
+		],
+		"description": "Use to evaluated javascript code. Bot owner only, for obvious reasons.",
+		"usage": [
+			"eval ```js this.channel.send(Date.now())```"
+		],
+		"module": "Administration",
+		"file": "eval",
+		"method": "run",
+		"arguments": [
+			"args",
+			"argument"
+		],
+		"prefix": "generic",
+		"requires": {
+			"user": "owner"
+		}
+	},
+	{
+		"aliases": [
+			"commands",
+			"cmds"
+		],
+		"description": "List the stable commands availabe on the bot.",
+		"usage": [
+			"commands",
+			"cmds"
+		],
+		"module": "Help",
+		"file": "commands",
+		"method": "list",
+		"arguments": [],
+		"prefix": "generic",
+		"requires": {
+			"args": {
+				"length": 0
+			}
+		}
+	},
+	{
+		"aliases": [
+			"help",
+			"h"
+		],
+		"description": "Displays help info for a given command.",
+		"usage": [
+			"help",
+			"help !lichess"
+		],
+		"module": "Help",
+		"file": "help",
+		"method": "run",
+		"arguments": [
+			"args"
+		],
+		"prefix": "generic"
+	},
+	{
+		"aliases": [
+			"Markdownify"
+		],
+		"description": "Fetches a message, but instead of outputting the same message, if the message has content, outputs the raw markdown required to produce that text. Developer's tool.",
+		"usage": [
+			"markdownify 390262198385246210 welcome",
+			"markdownify 470270623688425472"
+		],
+		"module": "Utility",
+		"file": "utility",
+		"method": "markdownify",
+		"arguments": [],
+		"prefix": "generic",
+		"requires": {
+			"args": {
+				"length": [
+					1,
+					2
+				]
+			}
+		}
+	},
+	{
+		"aliases": [
+			"JSONify"
+		],
+		"description": "Fetches a message, but instead of outputting the same message, if and only if the message has an embed, outputs the raw JSON required to produce that embed. Developer's tool.",
+		"usage": [
+			"JSONify 481094704864296972",
+			"JSONify 470270666818584599 announcements"
+		],
+		"module": "Utility",
+		"file": "utility",
+		"method": "jsonify",
+		"arguments": [],
+		"prefix": "generic",
+		"requires": {
+			"args": {
+				"length": [
+					1,
+					2
+				]
+			}
+		}
+	},
+	{
+		"aliases": [
+			"upversion"
+		],
+		"description": "Increases the semantic version count of the bot in package.json and in the nickname. Give argument `big` to increase Y count, `huge` to increase X count.",
+		"usage": [
+			"upversion",
+			"upversion big",
+			"upversion huge"
+		],
+		"module": "Administration",
+		"file": "set",
+		"method": "upversion",
+		"arguments": [
+			"argument"
+		],
+		"prefix": "generic",
+		"requires": {
+			"user": "owner"
+		}
+	},
+	{
+		"aliases": [
+			"downversion"
+		],
+		"description": "Decreases the semantic version count of the bot in package.json and in the nickname. Give argument `big` to decrease Y count, `huge` to decrease X count.",
+		"usage": [
+			"downversion",
+			"downversion big",
+			"downversion huge"
+		],
+		"module": "Administration",
+		"file": "set",
+		"method": "downversion",
+		"arguments": [
+			"argument"
+		],
+		"prefix": "generic",
+		"requires": {
+			"user": "owner"
+		}
+	},
+	{
+		"aliases": [
+			"version"
+		],
+		"description": "Sets the semantic version of LAZYbot to a custom specified value. Leave empty to return current value.",
+		"usage": [
+			"version",
+			"version 1.5.2"
+		],
+		"module": "Administration",
+		"file": "set",
+		"method": "version",
+		"arguments": [
+			"argument"
+		],
+		"prefix": "generic",
+		"requires": {
+			"user": "owner"
+		}
+	},
+	{
+		"aliases": [
+			"emoji"
+		],
+		"description": "Reacts to your message with all emoji listed in the message as separate words.",
+		"usage": [
+			"emoji lichess",
+			"emoji ✅ ❎"
+		],
+		"module": "Custom Reactions",
+		"file": "emoji",
+		"method": "emoji",
+		"arguments": [
+			"args"
+		],
+		"prefix": "generic"
+	},
+	{
+		"aliases": [
+			"react"
+		],
+		"description": "Reacts to a given message, or if name provided, their last in the channel, with all emoji listed in the message as separate words.\nCan use animated emoji.\nFirst argument must be message ID or user.",
+		"usage": [
+			"react ijh hyperpoggers",
+			"react 482013403595014155 lichess chesscom bughousetest"
+		],
+		"module": "Custom Reactions",
+		"file": "emoji",
+		"method": "react",
+		"arguments": [
+			"args"
+		],
+		"prefix": "generic"
+	},
+	{
+		"aliases": [
+			"ping"
+		],
+		"description": "Returns the bot's ping in milliseconds.\n**Note:** this is not your ping! This is the time taken for a client-emitted event to reach the bot, not how long it takes you to send a message.",
+		"usage": [
+			"ping"
+		],
+		"module": "Utility",
+		"file": "utility",
+		"method": "ping",
+		"arguments": [],
+		"prefix": "generic"
+	},
+	{
+		"aliases": [
+			"send"
+		],
+		"description": "Sends a ModMail to a specified user. Use `-s` or `--server` flag to send as anonymous.",
+		"usage": [
+			"send bakkouz -s",
+			"send penguingim1"
+		],
+		"module": "Administration",
+		"file": "input",
+		"method": "outgoing",
+		"arguments": [
+			"args"
+		],
+		"prefix": "generic"
+	}
+]

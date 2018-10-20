@@ -1,0 +1,18 @@
+{
+    "430035841239220224": {
+        "prefixes": {
+            "generic": "!"
+        },
+        "channels": {
+            "modmail": "general"
+        },
+        "colors": {
+            "generic": 53380,
+            "error": 15406156
+        },
+        "roles": {
+            "mod": "new role"
+        },
+        "_id": "430035841239220224"
+    }
+}

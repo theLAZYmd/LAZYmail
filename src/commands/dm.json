@@ -1,0 +1,43 @@
+[
+  {
+    "module": "DMs",
+    "file": "input",
+    "method": "incoming",
+    "guild": "Sending new ModMail on LAZYbot",
+    "arguments": [],
+    "prefix": ""
+  },
+  {
+    "aliases": [
+      "eval"
+    ],
+    "description": "Use to evaluated javascript code. Bot owner only, for obvious reasons.",
+    "usage": [
+      "eval ```js this.channel.send(Date.now())```"
+    ],
+    "module": "Administration",
+    "file": "eval",
+    "method": "run",
+    "arguments": ["args", "argument"],
+    "prefix": "!",
+    "requires": {
+      "user": "owner"
+    }
+  },
+  {
+    "aliases": [
+      "help",
+      "h"
+    ],
+    "description": "Displays help info for a given command.",
+    "usage": [
+      "help",
+      "help !lichess"
+    ],
+    "module": "Help",
+    "file": "help",
+    "method": "run",
+    "arguments": ["args"],
+    "prefix": "!"
+  }
+]

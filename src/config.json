@@ -1,0 +1,45 @@
+{
+    "guildFile": "./src/data/server.json",
+    "ids": {
+        "bot": "338772451565502474",
+        "betabot": "422847086145568769",
+        "owner": [
+            "185412969130229760"
+        ]
+    },
+    "colors": {
+        "generic": 53380,
+        "error": 15406156,
+        "ratings": 9359868,
+        "background": {
+            "icons": "212225",
+            "markdown": "2f3136",
+            "chat": "36393e"
+        },
+        "text": {
+            "channels": "727671"
+        }
+    },
+    "avatar": "https://i.imgur.com/Yl4Xoku.jpg",
+    "urls": {
+        "embeds": "https://raw.githubusercontent.com/theLAZYmd/LAZYbot/embeds/src/data/embeds.json"
+    },
+    "templates": {
+        "server": {
+            "prefixes": {
+                "generic": "!"
+            },
+            "channels": {
+                "modmail": "modmail"
+            },
+            "colors": {
+                "generic": 53380,
+                "error": 15406156
+            },
+            "roles": {
+                "mod": "mod"
+            },
+            "_id": ""
+        }
+    }
+}

@@ -1,0 +1,13 @@
+[
+	{
+		"name": "📨",
+		"module": "Modmail",
+		"file": "modmail/input",
+		"method": "reaction",
+		"requires": {
+			"channel": {
+				"type": "dm"
+			}
+		}
+	}
+]
