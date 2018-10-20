@@ -2,7 +2,7 @@
 	{
 		"name": "📨",
 		"module": "Modmail",
-		"file": "modmail/input",
+		"file": "input",
 		"method": "reaction",
 		"requires": {
 			"channel": {

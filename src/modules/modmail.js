@@ -51,13 +51,14 @@ class ModMail extends Parse {
 
 	async sort(data) {  //find the relevant modmil
 		try {
-			let [id, mailInfo] = Object.entries(this.modmail).find(([i, m]) => {
+			let f = Object.entries(this.modmail).find(([i, m]) => {
 				if (i.startsWith("_")) return false;
 				if (m.tag !== data.user.tag) return false;
 				if (m.overflow) return false;
 				return true;
 			});
-			if (!id || !mailInfo) return await this.Output.anew(data);
+			if (!f) return await this.output.anew(data);
+      let [id, mailInfo] = f;
 			let modmail = await this.mchannel.fetchMessage(id)
 				.catch(async () => {
 					let user = data.mod || data.user;
