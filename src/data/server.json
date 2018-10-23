@@ -14,5 +14,21 @@
             "mod": "new role"
         },
         "_id": "430035841239220224"
+    },
+    "490291021310066689": {
+        "prefixes": {
+            "generic": "!"
+        },
+        "channels": {
+            "modmail": "modmail"
+        },
+        "colors": {
+            "generic": 53380,
+            "error": 15406156
+        },
+        "roles": {
+            "mod": "mod"
+        },
+        "_id": "490291021310066689"
     }
 }

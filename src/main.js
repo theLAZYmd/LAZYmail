@@ -1,8 +1,6 @@
 //the permanent requires that access data files or modules
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const http = require("http");
-const express = require("express")();
 
 //the additional modules for debugging or only used sometimes
 const onStartup = require("./events/onStartup.js"); //doesn't require Parse
@@ -102,16 +100,6 @@ class Bot {
 			let reaction = message.reactions.get(emojiKey);
 			client.emit("messageReactionAdd", reaction, user);
 		});
-
-		express.get("/", (request, response) => { //interacting with glitch.com
-			response.sendStatus(200);
-		});
-
-		express.listen(process.env.PORT);
-
-		setInterval(() => {
-			http.get(`http://${process.env.lazybot || "houselazybot"}.glitch.me/`); //pinging glitch.com
-		}, 280000);
 
 	}
 
