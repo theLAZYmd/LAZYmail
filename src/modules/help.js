@@ -14,8 +14,8 @@ class Help extends Parse {
 			if (!args[0]) return this.Output.sender(new Embed()
 				.setTitle(Package.name + " v" + Package.version + " by theLAZYmd#2353")
 				.addField("Help on using Discord", "Type `... discord`", false)
-				.addField("View all commands", "Type `!commands`", false)
-				.addField("Get help on an individual command", "Type `!help commandName` for any given command", false)
+				.addField(`View all commands", "Type \`${this.server.prefixes.generic}commands\``, false)
+				.addField(`Get help on an individual command", "Type \`${this.server.prefixes.generic}help commandName\` for any given command`, false)
 				.addField("View the bot's GitHub repo", "[theLAZYmd/LAZYbot](http://bit.ly/LAZYbot)", false)
 			);
 			if (args.length > 1 && this.guild) throw "Cannot use this command outside of a guild.";
