@@ -16,7 +16,7 @@ class Router {
 				for (let [type, data] of Object.entries(reactionmessages)) {
 					for (let messageID of Object.keys(data)) {
 						if (messageReaction.message.id === messageID) {
-							let Constructor = require("../modules/" + (type + (type === "modmail" ? "/action" : "")).toLowerCase() + ".js");
+							let Constructor = require("../modules/" + (type === "modmail" ? "action" : "").toLowerCase() + ".js");
 							let Instance = new Constructor(messageReaction.message);
 							Instance.react(messageReaction, user, reactionmessages[type][messageID]);
 						}
