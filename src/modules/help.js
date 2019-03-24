@@ -61,21 +61,21 @@ class Help extends Parse {
 
 	get fields() {
 		let fields = [];
-		if (this.cmdInfo.subcommands) fields = Embed.fielder(fields,
-			"Subcommands",
-			this.subcommands,
-			false
-		)
-		fields = Embed.fielder(fields,
-			"Usage",
-			this.usage,
-			false
-		)
-		if (this.cmdInfo.requires && this.requires.trim()) fields = Embed.fielder(fields,
-			"Requirements",
-			this.requires,
-			false
-		)
+		if (this.cmdInfo.subcommands) fields.push({
+			"name": "Subcommands",
+			"value": this.subcommands,
+			"inline": false
+		});
+		fields.push({
+			"name": "Usage",
+			"value": this.usage,
+			"inline": false
+		});
+		if (typeof this.cmdInfo.requires === "string" && this.requires.trim()) fields.push({
+			"name": "Requirements",
+			"value": this.requires,
+			"inline": false
+		});
 		return fields;
 	}
 
@@ -86,8 +86,7 @@ class Help extends Parse {
 			let value = !Array.isArray(_value) ? [_value] : _value; //if it's not array (i.e. multiple possible satisfactory conditions)
 			value = value.map((item) => {
 				let _item = this.map(type, item);
-				if (_item === null || _item === "") return item;
-				if (_item === undefined) return _item;
+				if (typeof _item === "undefined") return _item; //if couldn't find lookup value, just use the given value
 				return _item;
 			});
 			if (value.includes("undefined")) continue;
